@@ -64,7 +64,7 @@
             >;
         };
 
-        raise_layer {
+        Special-Chars {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -76,6 +76,24 @@
 &trans  &kp RS(N1)         &kp RS(NUMBER_2)     &kp RS(N3)     &kp RS(N4)         &kp RS(NUMBER_5)    &kp LS(NUMBER_6)       &kp RA(EQUAL)  &kp RA(NUMBER_9)  &kp LS(EQUAL)  &kp LS(MINUS)     &trans
 &trans  &kp RA(BACKSLASH)  &kp LS(NON_US_BSLH)  &trans         &trans             &trans              &kp UNDER              &kp RA(N7)     &kp RA(NUMBER_0)  &kp LS(EQUAL)  &kp BACKSLASH     &trans
                                                 &trans         &trans             &trans              &trans                 &trans         &trans
+            >;
+        };
+
+        Left-Uml {
+            bindings = <
+&trans  &trans            &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp SINGLE_QUOTE  &kp MINUS  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                     &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Right-Uml {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LBKT  &trans  &kp SEMI  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans  &trans    &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
     };
