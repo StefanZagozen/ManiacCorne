@@ -47,10 +47,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp RC(ESCAPE)  &kp Q              &kp W    &kp E            &kp R          &kp T              &kp Y            &kp U         &kp I             &kp O    &kp P            &kp RS(RG(S))
-&kp RC(C)       &hml LEFT_SHIFT A  &lt 4 S  &hml LEFT_ALT D  &hml LCTRL F   &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr RCTRL J  &hmr RIGHT_ALT K  &lt 3 L  &kp RIGHT_SHIFT  &kp RA(TAB)
-&kp RC(V)       &kp Z              &kp X    &kp C            &kp V          &kp B              &kp N            &kp M         &kp COMMA         &kp DOT  &kp FSLH         &kp LC(TAB)
-                                            &kp DELETE       &kp BACKSPACE  &lt 1 TAB          &lt 2 ENTER      &kp SPACE     &to 5
+&kp ESCAPE  &kp Q              &kp W    &kp E            &kp R          &kp T              &kp Y            &kp U         &kp I             &kp O    &kp P            &kp RS(RG(S))
+&kp RC(C)   &hml LEFT_SHIFT A  &lt 4 S  &hml LEFT_ALT D  &hml LCTRL F   &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr RCTRL J  &hmr RIGHT_ALT K  &lt 3 L  &kp RIGHT_SHIFT  &kp RA(TAB)
+&kp RC(V)   &kp Z              &kp X    &kp C            &kp V          &kp B              &kp N            &kp M         &kp COMMA         &kp DOT  &kp FSLH         &kp LC(TAB)
+                                        &kp DELETE       &kp BACKSPACE  &lt 1 TAB          &lt 2 ENTER      &kp SPACE     &to 5
             >;
         };
 
