@@ -5,58 +5,118 @@
  */
 
 #include <../boards/shields/corne/boards/nice_nano.overlay>
-#include <dt-bindings/zmk/rgb.h>
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-
-
-
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&kp>, <&kp>;
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp ASTRK &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <6 7 8 9 10 18 19 21 30 32 20 31 33 34 38>;
+            flavor = "balanced";
         };
+
+        hmr: hmr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <1 2 3 4 5 13 25 26 29 14 17 27 16 15 28>;
+            flavor = "balanced";
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+            // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+            // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
+            bindings = <
+&kp RC(A)  &kp Q              &kp W    &kp E            &kp R          &kp T              &kp Y             &kp U         &kp I             &kp O    &kp P            &kp RS(RG(S))
+&kp RC(C)  &hml LEFT_SHIFT A  &lt 4 S  &hml LEFT_ALT D  &hml LCTRL F   &hml LEFT_GUI G    &hmr RIGHT_GUI H  &hmr RCTRL J  &hmr RIGHT_ALT K  &lt 3 L  &kp RIGHT_SHIFT  &kp LA(TAB)
+&kp RC(V)  &kp Z              &kp X    &kp C            &kp V          &kp B              &kp N             &kp M         &kp COMMA         &kp DOT  &kp FSLH         &kp LC(TAB)
+                                       &kp DELETE       &kp BACKSPACE  &lt 1 TAB          &lt 2 ENTER       &kp SPACE     &to 5
+            >;
+        };
+
+        numblock {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&trans  &kp F4   &kp F3   &kp F2   &kp F1  &none     &kp KP_MULTIPLY  &kp KP_N7  &kp KP_NUMBER_8  &kp KP_N9  &kp KP_PLUS   &trans
+&trans  &kp F8   &kp F7   &kp F6   &kp F5  &none     &kp KP_DIVIDE    &kp KP_N4  &kp KP_N5        &kp KP_N6  &kp KP_MINUS  &trans
+&trans  &kp F12  &kp F11  &kp F10  &kp F9  &trans    &kp KP_NUMLOCK   &kp KP_N1  &kp KP_N2        &kp KP_N3  &kp KP_DOT    &trans
+                          &trans   &trans  &trans    &trans           &trans     &trans
+            >;
+        };
+
+        Special-Chars {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&trans  &kp GRAVE          &kp RS(GRAVE)        &kp BACKSLASH  &kp RS(BACKSLASH)  &none               &kp RA(RIGHT_BRACKET)  &kp LS(N8)     &kp LS(N9)        &none          &kp LS(NUMBER_0)  &trans
+&trans  &kp RS(N1)         &kp RS(NUMBER_2)     &kp RS(N3)     &kp RS(N4)         &kp RS(NUMBER_5)    &kp LS(NUMBER_6)       &kp RA(EQUAL)  &kp RA(NUMBER_9)  &kp LS(EQUAL)  &kp LS(MINUS)     &trans
+&trans  &kp RA(BACKSLASH)  &kp LS(NON_US_BSLH)  &none          &none              &none               &kp UNDER              &kp RA(N7)     &kp RA(NUMBER_0)  &kp LS(EQUAL)  &kp BACKSLASH     &trans
+                                                &trans         &trans             &trans              &trans                 &trans         &trans
+            >;
+        };
+
+        Left-Uml {
+            bindings = <
+&none  &none             &none      &none  &none  &none    &none  &none  &none  &none   &none  &none
+&none  &kp SINGLE_QUOTE  &kp MINUS  &none  &none  &none    &none  &none  &none  &trans  &none  &none
+&none  &none             &none      &none  &none  &none    &none  &none  &none  &none   &none  &none
+                                    &none  &none  &none    &none  &none  &none
+            >;
+        };
+
+        Right-Uml {
+            bindings = <
+&none  &none  &none   &none  &none  &none    &none  &kp LBKT  &none  &kp SEMI  &none  &none
+&none  &none  &trans  &none  &none  &none    &none  &none     &none  &none     &none  &none
+&none  &none  &none   &none  &none  &none    &none  &none     &none  &none     &none  &none
+                      &none  &none  &none    &none  &none     &none
+            >;
+        };
+
+        Arrow-Keys {
+            bindings = <
+&trans  &none           &none  &none         &none      &none           &none   &kp PG_UP  &kp UP_ARROW  &kp PG_DN  &none  &trans
+&trans  &kp LEFT_SHIFT  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI    &none   &kp LEFT   &kp DOWN      &kp RIGHT  &none  &trans
+&trans  &none           &none  &none         &none      &none           &none   &kp HOME   &none         &kp END    &none  &trans
+                               &to 0         &trans     &trans          &trans  &trans     &to 6
+            >;
+        };
+
+        Mouse {
+            bindings = <
+&trans  &none           &none  &none         &none      &none           &none   &msc SCRL_UP    &mmv MOVE_UP    &msc SCRL_DOWN   &none  &trans
+&trans  &kp LEFT_SHIFT  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI    &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &trans
+&trans  &none           &none  &none         &none      &none           &none   &msc SCRL_LEFT  &none           &msc SCRL_RIGHT  &none  &trans
+                               &to 0         &trans     &trans          &trans  &trans          &to 5
+            >;
+        };
+    };
 };
