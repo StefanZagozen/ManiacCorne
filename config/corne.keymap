@@ -77,10 +77,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp GRAVE                 &kp RS(GRAVE)      &kp NON_US_BACKSLASH  &kp RS(NON_US_BACKSLASH)  &none               &kp RA(RIGHT_BRACKET)  &kp LS(N8)     &kp LS(N9)        &none          &kp LS(NUMBER_0)  &trans
-&trans  &kp RS(N1)                &kp RS(NUMBER_2)   &kp RS(N3)            &kp RS(N4)                &kp RS(NUMBER_5)    &kp LS(NUMBER_6)       &kp RA(EQUAL)  &kp RA(NUMBER_9)  &kp LS(EQUAL)  &kp LS(MINUS)     &trans
-&trans  &kp RA(NON_US_BACKSLASH)  &kp LS(BACKSLASH)  &kp LS(NUMBER_7)      &kp RA(MINUS)             &none               &kp UNDER              &kp RA(N7)     &kp RA(NUMBER_0)  &kp LS(EQUAL)  &kp BACKSLASH     &trans
-                                                     &trans                &trans                    &trans              &trans                 &trans         &trans
+&trans  &kp GRAVE                 &kp RS(GRAVE)      &kp NON_US_BACKSLASH  &kp RS(NON_US_BACKSLASH)  &none               &kp RA(RIGHT_BRACKET)  &kp LS(N8)        &kp LS(N9)        &none          &kp LS(NUMBER_0)  &trans
+&trans  &kp RS(N1)                &kp RS(NUMBER_2)   &kp RS(N3)            &kp RS(N4)                &kp RS(NUMBER_5)    &kp LS(NUMBER_6)       &kp RA(NUMBER_8)  &kp RA(NUMBER_9)  &kp LS(EQUAL)  &kp LS(MINUS)     &trans
+&trans  &kp RA(NON_US_BACKSLASH)  &kp LS(BACKSLASH)  &kp LS(NUMBER_7)      &kp RA(MINUS)             &none               &kp UNDER              &kp RA(N7)        &kp RA(NUMBER_0)  &kp LS(EQUAL)  &kp BACKSLASH     &trans
+                                                     &trans                &trans                    &trans              &trans                 &trans            &trans
             >;
         };
 
