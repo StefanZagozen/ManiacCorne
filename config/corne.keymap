@@ -96,19 +96,19 @@
 
         Left-Uml {
             bindings = <
-&none  &none             &none      &none  &none  &none    &none  &none  &none  &none   &none  &none
-&none  &kp SINGLE_QUOTE  &kp MINUS  &none  &none  &none    &none  &none  &none  &trans  &none  &none
-&none  &none             &none      &none  &none  &none    &none  &none  &none  &none   &none  &none
+&none  &none             &none      &none  &none  &none    &none  &none  &none  &none   &none   &none
+&none  &kp SINGLE_QUOTE  &kp MINUS  &none  &none  &none    &none  &none  &none  &trans  &trans  &none
+&none  &none             &none      &none  &none  &none    &none  &none  &none  &none   &none   &none
                                     &none  &none  &none    &none  &none  &none
             >;
         };
 
         Right-Uml {
             bindings = <
-&none  &none  &none   &none  &none  &none    &none  &kp LBKT  &none  &kp SEMI  &none  &none
-&none  &none  &trans  &none  &none  &none    &none  &none     &none  &none     &none  &none
-&none  &none  &none   &none  &none  &none    &none  &none     &none  &none     &none  &none
-                      &none  &none  &none    &none  &none     &none
+&none  &none   &none   &none  &none  &none    &none  &kp LBKT  &none  &kp SEMI  &none  &none
+&none  &trans  &trans  &none  &none  &none    &none  &none     &none  &none     &none  &none
+&none  &none   &none   &none  &none  &none    &none  &none     &none  &none     &none  &none
+                       &none  &none  &none    &none  &none     &none
             >;
         };
 
