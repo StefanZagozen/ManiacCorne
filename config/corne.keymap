@@ -53,21 +53,36 @@
         lon0: lon0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &rgb_ug RGB_COLOR_HSB(75,100,50)>, <&macro_press &to 0>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(75,100,50)>,
+                <&macro_press>,
+                <&to 0>;
+
             label = "LON0";
         };
 
         lon5: lon1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &rgb_ug RGB_COLOR_HSB(190,100,50)>, <&macro_press &to 5>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(190,100,50)>,
+                <&macro_press>,
+                <&to 5>;
+
             label = "LON1";
         };
 
         lon6: lon6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &rgb_ug RGB_COLOR_HSB(295,100,50)>, <&macro_press &to 6>;
+            bindings =
+                <&macro_press>,
+                <&rgb_ug RGB_COLOR_HSB(295,100,50)>,
+                <&macro_press>,
+                <&to 6>;
+
             label = "LON6";
         };
     };
@@ -86,7 +101,7 @@
 &kp ESCAPE  &kp Q              &kp W    &kp E            &kp R          &kp T              &kp Y            &kp U         &kp I             &kp O    &kp P            &kp RS(RG(S))
 &kp RC(C)   &hml LEFT_SHIFT A  &lt 4 S  &hml LEFT_ALT D  &hml LCTRL F   &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr RCTRL J  &hmr RIGHT_ALT K  &lt 3 L  &kp RIGHT_SHIFT  &kp RA(TAB)
 &kp RC(V)   &kp Z              &kp X    &kp C            &kp V          &kp B              &kp N            &kp M         &kp COMMA         &kp DOT  &kp FSLH         &kp LC(TAB)
-                                        &kp DELETE       &kp BACKSPACE  &lt 1 TAB          &lt 2 ENTER      &kp SPACE     &htlayer 5 5
+                                        &lt 7 DEL        &kp BACKSPACE  &lt 1 TAB          &lt 2 ENTER      &kp SPACE     &htlayer 5 5
             >;
         };
 
@@ -153,6 +168,15 @@
 &trans  &kp LEFT_SHIFT  &none  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_GUI    &none     &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &trans
 &trans  &none           &none  &none         &none      &none           &mkp MB3  &msc SCRL_LEFT  &kp DEL         &msc SCRL_RIGHT  &none  &trans
                                &lon0         &trans     &trans          &mkp MB2  &mkp MB1        &lon5
+            >;
+        };
+
+        cofiguration {
+            bindings = <
+&rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_ON     &none  &none  &none  &none  &none  &none
+&rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_OFF    &none  &none  &none  &none  &none  &none
+&none            &none            &none            &none            &none            &none              &none  &none  &none  &none  &none  &none
+                                                   &trans           &none            &none              &none  &none  &none
             >;
         };
     };
