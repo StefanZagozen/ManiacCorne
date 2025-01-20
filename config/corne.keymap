@@ -65,7 +65,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&rgb_ug RGB_COLOR_HSB(75,100,50)>,
+                <&rgb_ug RGB_COLOR_HSB(66,100,51)>,
                 <&macro_press>,
                 <&to 0>;
 
