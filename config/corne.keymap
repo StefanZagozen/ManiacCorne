@@ -53,21 +53,21 @@
         lon0: lon0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(75,100,50) &to 0>;
+            bindings = <&macro_press &rgb_ug RGB_COLOR_HSB(75,100,50)>, <&macro_press &to 0>;
             label = "LON0";
         };
 
         lon5: lon1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(190,100,50) &to 5>;
+            bindings = <&macro_press &rgb_ug RGB_COLOR_HSB(190,100,50)>, <&macro_press &to 5>;
             label = "LON1";
         };
 
         lon6: lon6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(295,100,50) &to 6>;
+            bindings = <&macro_press &rgb_ug RGB_COLOR_HSB(295,100,50)>, <&macro_press &to 6>;
             label = "LON6";
         };
     };
