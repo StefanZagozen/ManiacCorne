@@ -84,9 +84,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(66,100,51)>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&to 0>;
 
             label = "LON0";
@@ -96,9 +96,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(190,100,50)>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&to 5>;
 
             label = "LON1";
@@ -108,9 +108,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(295,100,50)>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&to 6>;
 
             label = "LON6";
@@ -120,11 +120,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(190,100,50)>,
                 <&macro_press>,
                 <&mo 5>,
                 <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 5>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(66,100,51)>;
 
             label = "LMO_5";
@@ -134,11 +137,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(28,100,50)>,
                 <&macro_press>,
                 <&mo 1>,
                 <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 1>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(66,100,51)>;
 
             label = "LMO_1";
@@ -148,11 +154,14 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(0,100,50)>,
                 <&macro_press>,
                 <&mo 2>,
                 <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_tap>,
                 <&rgb_ug RGB_COLOR_HSB(66,100,51)>;
 
             label = "LMO_2";
