@@ -77,6 +77,16 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        blmo_7: blmo_7 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BLMO_7";
+            bindings = <&lmo_7>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     macros {
@@ -120,10 +130,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(190,100,50)>,
                 <&macro_press>,
                 <&mo 5>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(190,100,50)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 5>,
@@ -137,10 +147,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(28,100,50)>,
                 <&macro_press>,
                 <&mo 1>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(28,100,50)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 1>,
@@ -154,10 +164,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(0,100,50)>,
                 <&macro_press>,
                 <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(0,100,50)>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&mo 2>,
@@ -165,6 +175,23 @@
                 <&rgb_ug RGB_COLOR_HSB(66,100,51)>;
 
             label = "LMO_2";
+        };
+
+        lmo_7: lmo_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(0,0,100)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 2>,
+                <&macro_tap>,
+                <&rgb_ug RGB_COLOR_HSB(66,100,51)>;
+
+            label = "LMO_7";
         };
     };
 
@@ -182,7 +209,7 @@
 &kp ESCAPE  &kp Q              &kp W    &kp E            &kp R          &kp T              &kp Y            &kp U         &kp I             &kp O    &kp P            &kp RS(RG(S))
 &kp RC(C)   &hml LEFT_SHIFT A  &lt 4 S  &hml LEFT_ALT D  &hml LCTRL F   &hml LEFT_GUI G    &hmr LEFT_GUI H  &hmr RCTRL J  &hmr RIGHT_ALT K  &lt 3 L  &kp RIGHT_SHIFT  &kp RA(TAB)
 &kp RC(V)   &kp Z              &kp X    &kp C            &kp V          &kp B              &kp N            &kp M         &kp COMMA         &kp DOT  &kp FSLH         &kp LC(TAB)
-                                        &lt 7 DEL        &kp BACKSPACE  &blmo_1 0 TAB      &blmo_2 0 ENTER  &kp SPACE     &blmo_5 0 5
+                                        &blmo_7 0 DEL    &kp BACKSPACE  &blmo_1 0 TAB      &blmo_2 0 ENTER  &kp SPACE     &blmo_5 0 5
             >;
         };
 
