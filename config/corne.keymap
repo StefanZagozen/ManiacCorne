@@ -251,14 +251,14 @@
         };
 
         combo_undo {
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp LC(Y)>;
             key-positions = <6 18>;
             layers = <0>;
             timeout-ms = <25>;
         };
 
         combo_redo {
-            bindings = <&kp LC(Y)>;
+            bindings = <&kp LC(Z)>;
             key-positions = <25 13>;
             layers = <0>;
             timeout-ms = <25>;
