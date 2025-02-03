@@ -257,8 +257,8 @@
             timeout-ms = <25>;
         };
 
-        combo_redo {
-            bindings = <&kp LC(Z)>;
+        combo_select_all {
+            bindings = <&kp LC(A)>;
             key-positions = <25 13>;
             layers = <0>;
             timeout-ms = <25>;
