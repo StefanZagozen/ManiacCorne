@@ -254,35 +254,35 @@
         combo_cut {
             bindings = <&kp LC(X)>;
             key-positions = <14 26>;
-            layers = <0>;
+            layers = <0 2 4 3>;
             timeout-ms = <25>;
         };
 
         combo_copy {
             bindings = <&kp LC(C)>;
             key-positions = <27 15>;
-            layers = <0>;
+            layers = <0 2 4 3>;
             timeout-ms = <25>;
         };
 
         combo_paste {
             bindings = <&kp LC(V)>;
             key-positions = <16 28>;
-            layers = <0>;
+            layers = <0 2 3 4>;
             timeout-ms = <25>;
         };
 
         combo_undo {
             bindings = <&kp LC(Y)>;
             key-positions = <6 18>;
-            layers = <0>;
+            layers = <0 2 3 4>;
             timeout-ms = <25>;
         };
 
         combo_select_all {
             bindings = <&kp LC(A)>;
             key-positions = <25 13>;
-            layers = <0>;
+            layers = <0 2 4 3>;
             timeout-ms = <25>;
         };
     };
