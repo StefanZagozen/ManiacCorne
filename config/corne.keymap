@@ -271,55 +271,6 @@
             timeout-ms = <25>;
         };
 
-        combo_cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <14 26>;
-            layers = <0 2 4 3>;
-            timeout-ms = <25>;
-        };
-
-        combo_copy {
-            bindings = <&kp LC(C)>;
-            key-positions = <27 15>;
-            layers = <0 2 4 3>;
-            timeout-ms = <25>;
-        };
-
-        combo_paste {
-            bindings = <&kp LC(V)>;
-            key-positions = <16 28>;
-            layers = <0 2 3 4>;
-            timeout-ms = <25>;
-        };
-
-        combo_undo {
-            bindings = <&kp LC(Y)>;
-            key-positions = <6 18>;
-            layers = <0 2 3 4>;
-            timeout-ms = <25>;
-        };
-
-        combo_select_all {
-            bindings = <&kp LC(A)>;
-            key-positions = <25 13>;
-            layers = <0 2 4 3>;
-            timeout-ms = <25>;
-        };
-
-        l_ctrl_shift {
-            bindings = <&kp LS(LEFT_CONTROL)>;
-            key-positions = <15 16>;
-            layers = <0 3 4 2>;
-            timeout-ms = <25>;
-        };
-
-        r_ctrl_shift {
-            bindings = <&kp RS(RIGHT_CONTROL)>;
-            key-positions = <19 20>;
-            layers = <0 2 4 3>;
-            timeout-ms = <25>;
-        };
-
         b_round_open {
             bindings = <&kp LS(N8)>;
             key-positions = <6 7>;
