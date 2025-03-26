@@ -367,6 +367,16 @@
             key-positions = <7 8>;
             layers = <0>;
         };
+
+        dollar {
+            bindings = <&kp RS(NUMBER_4)>;
+            key-positions = <16 17>;
+        };
+
+        and {
+            bindings = <&kp RS(NUMBER_6)>;
+            key-positions = <28 29>;
+        };
     };
 
     keymap {
