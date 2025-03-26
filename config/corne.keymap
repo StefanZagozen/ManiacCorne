@@ -319,6 +319,54 @@
             layers = <0 2 4 3>;
             timeout-ms = <25>;
         };
+
+        b_round_open {
+            bindings = <&kp LS(N8)>;
+            key-positions = <4 5>;
+            layers = <0>;
+        };
+
+        b_round_close {
+            bindings = <&kp LS(N9)>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        b_square_open {
+            bindings = <&kp RA(N8)>;
+            key-positions = <17 16>;
+            layers = <0>;
+        };
+
+        b_square_close {
+            bindings = <&kp RA(N9)>;
+            key-positions = <19 18>;
+            layers = <0>;
+        };
+
+        b_curley_open {
+            bindings = <&kp RA(N7)>;
+            key-positions = <28 29>;
+            layers = <0>;
+        };
+
+        b_curley_close {
+            bindings = <&kp RA(N0)>;
+            key-positions = <31 30>;
+            layers = <0>;
+        };
+
+        b_lt {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <4 3>;
+            layers = <0>;
+        };
+
+        b_gt {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
     };
 
     keymap {
