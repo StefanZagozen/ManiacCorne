@@ -322,49 +322,49 @@
 
         b_round_open {
             bindings = <&kp LS(N8)>;
-            key-positions = <4 5>;
+            key-positions = <6 7>;
             layers = <0>;
         };
 
         b_round_close {
             bindings = <&kp LS(N9)>;
-            key-positions = <6 7>;
+            key-positions = <8 7>;
             layers = <0>;
         };
 
         b_square_open {
             bindings = <&kp RA(N8)>;
-            key-positions = <17 16>;
+            key-positions = <18 19>;
             layers = <0>;
         };
 
         b_square_close {
             bindings = <&kp RA(N9)>;
-            key-positions = <19 18>;
+            key-positions = <19 20>;
             layers = <0>;
         };
 
         b_curley_open {
             bindings = <&kp RA(N7)>;
-            key-positions = <28 29>;
+            key-positions = <30 31>;
             layers = <0>;
         };
 
         b_curley_close {
             bindings = <&kp RA(N0)>;
-            key-positions = <31 30>;
+            key-positions = <31 32>;
             layers = <0>;
         };
 
         b_lt {
-            bindings = <&kp LESS_THAN>;
+            bindings = <&kp NON_US_BACKSLASH>;
             key-positions = <4 3>;
             layers = <0>;
         };
 
         b_gt {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <7 8>;
+            bindings = <&kp RS(NON_US_BACKSLASH)>;
+            key-positions = <4 5>;
             layers = <0>;
         };
 
